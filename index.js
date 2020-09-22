@@ -1,13 +1,14 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./generateMarkdown")
+const generateMarkdown = require("./generateMarkdown");
+const path = require("path")
 
 
 
 
 // array of questions for user
 function promptUser() {
-    return inquirer.prompt([
+   return inquirer.prompt([
         {
             type: "input",
             name: "title",
@@ -35,9 +36,10 @@ function promptUser() {
             message: "How do you use your application?"
         },
         {
-            type: "input",
+            type: "list",
             name: "license",
-            message: "Which license would you like to use - MIT, Unlicense, or ISC?"
+            message: "Which license would you like to use - MIT, Unlicense, or ISC?",
+            choices: [{name: "MIT", value: "MIT"}, {name: "Apache 2.0", value: "Apache"}, {name: "ISC", value: "ISC"}]
         },
         {
             type: "input",
@@ -61,10 +63,16 @@ function promptUser() {
 
 // function to write README file
 function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(),fileName),data)
 }
 
 // function to initialize program
 function init() {
+    promptUser().then(function(answers){
+        console.log(answers)
+        //Call write to file File name is equal to readMe.md     data is equal to answers
+        writeToFile("README.md", generateMarkdown(answers))
+    })
 
 }
 
