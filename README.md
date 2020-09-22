@@ -20,17 +20,16 @@
   ## Usage
   Type node and the name of the file into the terminal and enter your answers that
 
-  ## License
-  MIT
-
   ## Contributing
-  Myself, Matthew Althoff
+  Thomas Matthew Althoff
 
   ## Tests
-  Running the project inwindow
+  Running the project in the terminal and then checking the README file
 
-  ## Questions
-  fakeemail.org
+  Link to the demo video 
+
+  
+
   
 
 
