@@ -1,5 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./generateMarkdown")
 
 
 
@@ -25,11 +26,6 @@ function promptUser() {
         },
         {
             type: "input",
-            name: "title",
-            message: "What is the title of your project?"
-        },
-        {
-            type: "input",
             name: "installation",
             message: "What is the installation process?"
         },
@@ -41,11 +37,11 @@ function promptUser() {
         {
             type: "input",
             name: "license",
-            message: "Which license would you like to use? "
+            message: "Which license would you like to use - MIT, Unlicense, or ISC?"
         },
         {
             type: "input",
-            name: "contribution",
+            name: "contributing",
             message: "Who contributed to your project?"
         },
         {
