@@ -1,7 +1,9 @@
-# ReadMe Generator - Thomas Matthew Althoff
- 
+# Employee Tracker
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+
   ## Description
-  It is an automatic readme generator using node to perform the generation with their initialize function and json packages.
+  For this app it utilizes Mysql and javascript to create an environment to read and keep track of your employees 
 
   ## Table of Contents
   [title](#title)
@@ -15,19 +17,21 @@
 
 
   ## Installation
-  You download the git repo and clone it down and then initialize node in the index.js files terminal to start creating your answers
+  You will copy the repo down, do a npm install, as well as a npm init first, npm inquirer and npm mysql. 
 
   ## Usage
-  Type node and the name of the file into the terminal and enter your answers that
+  Open the intergrated terminal on the app.js file and then follow the prompts
+
+  ## License
+  MIT
 
   ## Contributing
-  Thomas Matthew Althoff
+  Thomas Althoff
 
   ## Tests
-  Running the project in the terminal and then checking the README file
+  Run the application and it shall give you prompts and data to insert
 
-  Link to the demo video 
-
+  ## Questions
   
 
   
